@@ -91,6 +91,9 @@ subprojects { subproj ->
         mavenLocal {
             // BuildTools installs Maven artifacts locally. Ignore repository-specific
             // Gradle module descriptors so Windows and Linux resolve the same POM graph.
+            content {
+                includeGroup 'org.spigotmc'
+            }
             metadataSources {
                 mavenPom()
                 artifact()
@@ -102,35 +105,116 @@ subprojects { subproj ->
         maven { url = 'https://maven-central.storage-download.googleapis.com/maven2' }
 
         // AnvilGUI, Treasury
-        maven { url = 'https://repo.codemc.io/repository/maven-snapshots' }
+        maven {
+            url = 'https://repo.codemc.io/repository/maven-snapshots'
+            content {
+                includeGroup 'me.lokka30'
+                includeGroup 'net.wesjd'
+            }
+        }
         // WorldEdit
-        maven { url = 'https://repo.aikar.co/nexus/content/groups/aikar' }
+        maven {
+            url = 'https://repo.aikar.co/nexus/content/groups/aikar'
+            content {
+                includeGroup 'com.sk89q.worldedit'
+            }
+        }
         // BungeeCord
-        maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven {
+            url = 'https://oss.sonatype.org/content/repositories/snapshots'
+            content {
+                includeGroupByRegex 'net\\.md-5(\\..*)?'
+            }
+        }
         // PlaceholderAPI
-        maven { url = 'https://repo.extendedclip.com/content/repositories/placeholderapi' }
+        maven {
+            url = 'https://repo.extendedclip.com/content/repositories/placeholderapi'
+            content {
+                includeGroup 'me.clip'
+            }
+        }
         // PlayerPoints
-        maven { url = 'https://repo.rosewooddev.io/repository/public' }
+        maven {
+            url = 'https://repo.rosewooddev.io/repository/public'
+            content {
+                includeGroup 'org.black_ixx'
+            }
+        }
         // SpigotMC
-        maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots' }
-        // DiscordSRV
-        maven { url = 'https://nexus.scarsz.me/content/groups/public' }
+        maven {
+            url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots'
+            content {
+                includeGroup 'org.spigotmc'
+            }
+        }
+        // DiscordSRV, Vault
+        maven {
+            url = 'https://nexus.scarsz.me/content/groups/public'
+            content {
+                includeGroup 'com.discordsrv'
+                includeGroup 'net.milkbowl.vault'
+            }
+        }
         // Towny
-        maven { url = 'https://repo.glaremasters.me/repository/towny' }
+        maven {
+            url = 'https://repo.glaremasters.me/repository/towny'
+            content {
+                includeGroup 'com.palmergames.bukkit.towny'
+            }
+        }
         // PlayerAuctions
-        maven { url = 'https://repo.olziedev.com' }
+        maven {
+            url = 'https://repo.olziedev.com'
+            content {
+                includeGroup 'com.olziedev'
+            }
+        }
         // WorldGuard
-        maven { url = 'https://maven.enginehub.org/repo' }
+        maven {
+            url = 'https://maven.enginehub.org/repo'
+            content {
+                includeGroupByRegex 'com\\.sk89q(\\..*)?'
+            }
+        }
         // ExcellentEconomy
-        maven { url = 'https://repo.nightexpressdev.com/releases' }
-        // Vault, PEconomy, MobChipLite, FoliaLib
-        maven { url = 'https://jitpack.io' }
+        maven {
+            url = 'https://repo.nightexpressdev.com/releases'
+            content {
+                includeGroupByRegex 'su\\.nightexpress(\\..*)?'
+            }
+        }
+        // PEconomy, MobChipLite, FoliaLib
+        maven {
+            url = 'https://jitpack.io'
+            content {
+                includeGroupByRegex 'com\\.github(\\..*)?'
+                includeGroup 'me.soknight'
+            }
+        }
         // Lib's Disguises
-        maven { url = 'https://mvn.lib.co.nz/public' }
+        maven {
+            url = 'https://mvn.lib.co.nz/public'
+            content {
+                includeGroup 'LibsDisguises'
+            }
+        }
         // Paper API
-        maven { url = 'https://repo.papermc.io/repository/maven-public' }
-        // Mojang Authlib
-        maven { url = 'https://libraries.minecraft.net' }
+        maven {
+            url = 'https://repo.papermc.io/repository/maven-public'
+            content {
+                includeGroupByRegex 'io\\.papermc(\\..*)?'
+                // CodeMC no longer retains this historical snapshot.
+                includeGroup 'net.wesjd'
+                includeGroupByRegex 'net\\.md-5(\\..*)?'
+            }
+        }
+        // Mojang libraries
+        maven {
+            url = 'https://libraries.minecraft.net'
+            content {
+                includeGroup 'com.mojang'
+            }
+        }
     }
 
     def version = 17
