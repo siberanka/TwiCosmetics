@@ -7,5 +7,9 @@ pluginManagement {
         }
     }
 }
-rootProject.name = 'UltraCosmetics'
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+rootProject.name = 'TwiCosmetics'
 include 'v1_21_R7', 'core', 'java-21', 'legacy-events', 'nms', 'paper-support'

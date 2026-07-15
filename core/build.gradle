@@ -13,6 +13,9 @@ configurations {
 }
 
 dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.14.4'
+    testImplementation 'org.spigotmc:spigot-api:1.21.11-R0.1-SNAPSHOT'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.14.4'
     // Depend on a jar in the 'core' folder: fileTree(dir: '.', include: ['*.jar'])
     // https://hub.spigotmc.org/stash/projects/SPIGOT/repos/spigot
     compileOnly 'org.spigotmc:spigot-api:1.21.11-R0.1-SNAPSHOT'
@@ -72,6 +75,10 @@ dependencies {
     compileOnly(project(':legacy-events'))
 }
 
+test {
+    useJUnitPlatform()
+}
+
 shadowJar {
     // Causes shadow jar to overwrite normal jar, which makes it work with Jitpack
     archiveClassifier = ''
@@ -82,7 +89,7 @@ shadowJar {
         exclude(dependency('com.github.technicallycoded:FoliaLib:.*'))
         exclude(dependency('com.github.datatags.MobChipLite:.*:.*'))
     }
-    def path = 'be.isach.ultracosmetics.shaded'
+    def path = 'com.siberanka.twicosmetics.shaded'
     relocate('org.bstats', path + '.metrics')
     relocate('net.wesjd', path + '.anvilgui')
     relocate('me.gamercoder215.mobchip', path + '.mobchip')
@@ -91,15 +98,15 @@ shadowJar {
 }
 
 bukkit {
-    name = 'UltraCosmetics'
-    authors = ['datatags']
-    main = 'be.isach.ultracosmetics.UltraCosmetics'
+    name = 'TwiCosmetics'
+    authors = ['datatags', 'siberanka']
+    main = 'com.siberanka.twicosmetics.TwiCosmetics'
     apiVersion = '1.17'
     softDepend = ['LibsDisguises', 'Vault', 'PlaceholderAPI', 'PlayerPoints', 'WorldGuard', 'Essentials', 'LuckPerms', 'DiscordSRV', 'ChestSort', 'Towny', 'PEconomy', 'PlayerAuctions', 'Treasury', 'ExcellentEconomy']
     commands {
-        ultracosmetics {
-            aliases = ['uc', 'cosmetics']
-            description = 'Main command of UltraCosmetics'
+        twicosmetics {
+            aliases = ['uc', 'cosmetics', 'ultracosmetics']
+            description = 'Main command of TwiCosmetics'
             usage = '/<command>'
         }
     }
@@ -127,8 +134,8 @@ publishing {
     publications {
         pluginMaven(MavenPublication) {
             //artifactId project.name
-            groupId project.group
-            version project.version
+            groupId = project.group
+            version = project.version
             from components.java
         }
     }

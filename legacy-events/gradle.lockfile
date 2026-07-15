@@ -1,0 +1,17 @@
+# This is a Gradle generated file for dependency locking.
+# Manual edits can break the build and are not advised.
+# This file is expected to be part of source control.
+# To regenerate this file, run: ./gradlew :legacy-events:dependencies --write-locks
+com.google.code.findbugs:jsr305:3.0.2=compileClasspath
+com.google.code.gson:gson:2.10.1=compileClasspath
+com.google.errorprone:error_prone_annotations:2.18.0=compileClasspath
+com.google.guava:failureaccess:1.0.1=compileClasspath
+com.google.guava:guava:32.1.2-jre=compileClasspath
+com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava=compileClasspath
+com.google.j2objc:j2objc-annotations:2.8=compileClasspath
+net.md-5:bungeecord-chat:1.20-R0.1=compileClasspath
+org.checkerframework:checker-qual:3.33.0=compileClasspath
+org.joml:joml:1.10.5=compileClasspath
+org.spigotmc:spigot-api:1.20.3-R0.1-SNAPSHOT=compileClasspath
+org.yaml:snakeyaml:2.2=compileClasspath
+empty=annotationProcessor,compile,runtimeClasspath,shaded,testAnnotationProcessor,testCompileClasspath,testRuntimeClasspath

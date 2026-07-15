@@ -1,0 +1,30 @@
+package com.siberanka.twicosmetics.cosmetics.pets;
+
+import com.siberanka.twicosmetics.TwiCosmetics;
+import com.siberanka.twicosmetics.cosmetics.type.PetType;
+import com.siberanka.twicosmetics.player.UltraPlayer;
+
+import org.bukkit.DyeColor;
+import org.bukkit.entity.Shulker;
+
+/**
+ * Represents an instance of a shulker pet summoned by a player.
+ *
+ * @author Chris6ix
+ * @since 28-09-2022
+ */
+public class PetShulker extends Pet {
+    public PetShulker(UltraPlayer owner, PetType type, TwiCosmetics ultraCosmetics) {
+        super(owner, type, ultraCosmetics);
+    }
+
+    @Override
+    public void setupEntity() {
+        ((Shulker) entity).setPeek(1);
+    }
+
+    @Override
+    protected boolean customize(String customization) {
+        return enumCustomize(DyeColor.class, customization, ((Shulker) entity)::setColor);
+    }
+}

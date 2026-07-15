@@ -11,8 +11,8 @@ allprojects {
     idea.module.downloadJavadoc = true
     idea.module.downloadSources = true
 
-    group = 'be.isach.UltraCosmetics'
-    version = '3.16-DEV-b1'
+    group = 'com.siberanka.twicosmetics'
+    version = '3.16.0-twi.1'
 
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
@@ -29,6 +29,10 @@ allprojects {
     configurations {
         shaded
         compile.extendsFrom shaded
+    }
+
+    dependencyLocking {
+        lockAllConfigurations()
     }
 
     def gitVersionProvider = providers.exec {
@@ -76,8 +80,8 @@ dependencies {
             shaded(project(path: ':core', configuration: 'shadow'))
             return;
         }
-        shaded(p) {
-            transitive false
+        shaded(project(p.path)) {
+            transitive = false
         }
     }
 }
@@ -181,6 +185,10 @@ gradle.projectsEvaluated {
             standardOutput = System.out
             errorOutput = System.err
             ignoreExitValue = false
+            if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+                jvmArgs '-Djavax.net.ssl.trustStoreType=Windows-ROOT'
+                environment 'MAVEN_OPTS', '-Djavax.net.ssl.trustStoreType=Windows-ROOT'
+            }
             dependsOn btDownload
         }
 

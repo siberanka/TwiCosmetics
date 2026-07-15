@@ -1,0 +1,19 @@
+package com.siberanka.twicosmetics.cosmetics.suits;
+
+import com.siberanka.twicosmetics.TwiCosmetics;
+import com.siberanka.twicosmetics.cosmetics.type.SuitType;
+import com.siberanka.twicosmetics.player.UltraPlayer;
+import com.cryptomorin.xseries.XMaterial;
+
+import java.util.List;
+
+public class SuitSanta extends TrailSuit {
+    public SuitSanta(UltraPlayer ultraPlayer, SuitType suitType, TwiCosmetics ultraCosmetics) {
+        super(ultraPlayer, suitType, ultraCosmetics);
+    }
+
+    @Override
+    protected List<XMaterial> getTrailBlocks() {
+        return List.of(XMaterial.RED_WOOL, XMaterial.LIME_WOOL);
+    }
+}

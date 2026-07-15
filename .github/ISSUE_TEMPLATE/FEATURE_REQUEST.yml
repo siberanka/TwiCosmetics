@@ -1,5 +1,5 @@
 name: 🚀 Feature request
-description: "Have an idea for a new feature in UltraCosmetics? Suggest it here!"
+description: "Have an idea for a new feature in TwiCosmetics? Suggest it here!"
 labels: ["enhancement"]
 body:
   - type: textarea

@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Hello, and thank you for contributing to UltraCosmetics!
+Hello, and thank you for contributing to TwiCosmetics!
 
 Before submitting your contribution, please make sure to take a moment and read through the following guidelines:
 
@@ -16,7 +16,7 @@ Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Issue Reporting Guidelines
 
-- When creating an issue, please make sure you're using the correct [issue template](https://github.com/datatags/UltraCosmetics/issues/new/choose).
+- When creating an issue, please make sure you're using the correct [issue template](https://github.com/siberanka/TwiCosmetics/issues/new/choose).
 
 ## Pull Request Guidelines
 

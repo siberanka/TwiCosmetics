@@ -1,5 +1,5 @@
 name: 🐛 Bug report
-description: Found a bug in UltraCosmetics? Report it here!
+description: Found a bug in TwiCosmetics? Report it here!
 labels: ["bug"]
 body:
   - type: checkboxes
@@ -32,9 +32,9 @@ body:
       required: true
   - type: input
     attributes:
-      label: "What version of UltraCosmetics are you using? Do not say 'latest'."
-      description: "Hint: check the filename of your UltraCosmetics jar."
-      placeholder: "ex. UltraCosmetics-2.6-DEV-b6"
+      label: "What version of TwiCosmetics are you using? Do not say 'latest'."
+      description: "Hint: check the filename of your TwiCosmetics jar."
+      placeholder: "ex. TwiCosmetics-3.16.0-twi.1"
     validations:
       required: true
   - type: input
@@ -48,7 +48,7 @@ body:
     attributes:
       label: "What plugins do you have installed?"
       description: "Hint: run /plugins in the console and paste the output here."
-      placeholder: "ex. Plugins (5): Essentials, LuckPerms, UltraCosmetics, WorldEdit, WorldGuard"
+      placeholder: "ex. Plugins (5): Essentials, LuckPerms, TwiCosmetics, WorldEdit, WorldGuard"
     validations:
       required: true
   - type: textarea

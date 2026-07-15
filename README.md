@@ -7,9 +7,10 @@
 [![Downloads](https://img.shields.io/spiget/downloads/10905?color=blue)][spigotmc-link]
 [![Crowdin](https://badges.crowdin.net/ultracosmetics/localized.svg)][crowdin-link]
 
-# UltraCosmetics
+# TwiCosmetics
 
-UltraCosmetics is a Spigot plugin that adds cosmetics to your Minecraft server!
+TwiCosmetics is a security-hardened, performance-focused fork of UltraCosmetics for Spigot, Paper, and Folia.
+Maintained by **siberanka**; original work and contributors remain credited in the source history and license.
 
 For all things on GitHub, please make sure you follow the [Contributing Guide](.github/CONTRIBUTING.md).
 
@@ -20,7 +21,7 @@ Please read the [Development section](#-development) in this README.
 
 ## ✅ Compatibility
 
-UltraCosmetics v3 officially supports **Spigot** and **Paper**.
+TwiCosmetics officially supports **Spigot**, **Paper**, and **Folia**.
 
 Due to technical changes in recent versions of Minecraft, support for some very old versions has been dropped!
 
@@ -28,16 +29,14 @@ Due to technical changes in recent versions of Minecraft, support for some very 
 - For **3.6+** -> **1.17.1** to **latest**
 
 For more information please check out
-the [Supported Configurations page](https://github.com/UltraCosmetics/UltraCosmetics/wiki/Supported-Configurations) in
+the [upstream Supported Configurations page](https://github.com/UltraCosmetics/UltraCosmetics/wiki/Supported-Configurations) in
 the Wiki.
 
 ## 📥 Download
 
-You can download the latest stable release of UltraCosmetics from our official links:
+You can download TwiCosmetics from this repository's releases:
 
-- [SpigotMC][spigotmc-link]
 - [GitHub][github-releases-link]
-- [Modrinth][modrinth-link]
 
 ### Development Builds
 
@@ -54,7 +53,7 @@ the [Wiki][wiki-link].
 
 ## 🐛 Report a Bug
 
-Please use the [Issues page](https://github.com/UltraCosmetics/UltraCosmetics/issues) on GitHub to report a bug.
+Please use the [Issues page](https://github.com/siberanka/TwiCosmetics/issues) on GitHub to report a bug.
 
 When creating an issue, please make sure you're using the bug report issue template!
 
@@ -76,8 +75,8 @@ The Issues page of this repository is **exclusively** for bug reports and featur
 
 ## 💻 Development
 
-[![CI Status](https://github.com/UltraCosmetics/UltraCosmetics/actions/workflows/gradle.yml/badge.svg)](https://github.com/UltraCosmetics/UltraCosmetics/actions/workflows/gradle.yml)
-[![CodeQL Status](https://github.com/UltraCosmetics/UltraCosmetics/actions/workflows/codeql.yml/badge.svg)](https://github.com/UltraCosmetics/UltraCosmetics/actions/workflows/codeql.yml)
+[![CI Status](https://github.com/siberanka/TwiCosmetics/actions/workflows/gradle.yml/badge.svg)](https://github.com/siberanka/TwiCosmetics/actions/workflows/gradle.yml)
+[![CodeQL Status](https://github.com/siberanka/TwiCosmetics/actions/workflows/codeql.yml/badge.svg)](https://github.com/siberanka/TwiCosmetics/actions/workflows/codeql.yml)
 
 When contributing, please make sure you check out the [contribution guidelines](.github/CONTRIBUTING.md).
 
@@ -88,7 +87,7 @@ If you're looking to compile the project yourself, please check out the [compili
 [GNU Affero General Public License v3.0](./LICENSE)
 
 ```text
-UltraCosmetics - Lightweight, Fun and Easy-to-Use Spigot Cosmetics plugin.
+TwiCosmetics - Lightweight and security-hardened Minecraft cosmetics plugin.
 Copyright (C) 2025 Sacha "iSach" Lewin
 
 This program is free software: you can redistribute it and/or modify
@@ -109,5 +108,5 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 [wiki-link]: https://github.com/UltraCosmetics/UltraCosmetics/wiki
 [spigotmc-link]: https://www.spigotmc.org/resources/10905/
 [crowdin-link]: https://crowdin.com/project/ultracosmetics
-[github-releases-link]: https://github.com/UltraCosmetics/UltraCosmetics/releases
+[github-releases-link]: https://github.com/siberanka/TwiCosmetics/releases
 [modrinth-link]: https://modrinth.com/plugin/ultracosmetics

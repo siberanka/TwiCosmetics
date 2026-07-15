@@ -488,11 +488,11 @@ Air-Materials:
   - VOID_AIR
   - LIGHT
 
-# Whether UltraCosmetics should automatically download and install new versions.
+# Whether TwiCosmetics should automatically download and install new versions.
 # Requires Check-For-Updates to be enabled.
 Auto-Update: false
 
-# Whether UltraCosmetics should prevent vanished players from using cosmetics.
+# Whether TwiCosmetics should prevent vanished players from using cosmetics.
 # Works with any vanish plugin that uses 'vanished' metdata.
 Prevent-Cosmetics-In-Vanish: false
 
@@ -500,7 +500,12 @@ Prevent-Cosmetics-In-Vanish: false
 # Set to 0 to spawn all entities instantly.
 Max-Entity-Spawns-Per-Tick: 10
 
-# Languages supported by this version of UltraCosmetics.
+# Hard safety budget for configurable particle multipliers. Values at or below zero can
+# create invalid/infinite animation loops, while very large values can flood clients.
+Performance:
+  Max-Particle-Multiplier: 3.0
+
+# Languages supported by this version of TwiCosmetics.
 # This is not a configurable list, just informative.
 Supported-Languages: [ ]
 
@@ -538,7 +543,7 @@ Projectile-Types:
 # If ChestSort is not installed, this has no effect.
 ChestSort-Hook: true
 
-# If Towny is installed, UltraCosmetics will prevent Towny from removing UC's pets and mounts.
+# If Towny is installed, TwiCosmetics will prevent Towny from removing its pets and mounts.
 # If Towny is not installed, this has no effect.
 Towny-Hook: true
 

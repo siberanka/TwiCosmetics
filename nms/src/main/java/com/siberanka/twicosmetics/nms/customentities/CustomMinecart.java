@@ -1,0 +1,16 @@
+package com.siberanka.twicosmetics.nms.customentities;
+
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.vehicle.minecart.Minecart;
+import net.minecraft.world.level.Level;
+
+public class CustomMinecart extends Minecart {
+    public CustomMinecart(EntityType<?> type, Level world) {
+        super(type, world);
+    }
+
+    @Override
+    public float maxUpStep() {
+        return 1.0F;
+    }
+}
