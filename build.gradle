@@ -88,7 +88,14 @@ dependencies {
 
 subprojects { subproj ->
     repositories {
-        mavenLocal()
+        mavenLocal {
+            // BuildTools installs Maven artifacts locally. Ignore repository-specific
+            // Gradle module descriptors so Windows and Linux resolve the same POM graph.
+            metadataSources {
+                mavenPom()
+                artifact()
+            }
+        }
         // mavenCentral()
         // Instead of real maven central we use the maven mirror Paper uses, to ensure all the dependencies we want will
         // also be available to the library loader.

@@ -3,9 +3,3 @@ dependencies {
     // https://hub.spigotmc.org/stash/projects/SPIGOT/repos/spigot
     compileOnly 'org.spigotmc:spigot-api:1.20.3-R0.1-SNAPSHOT'
 }
-
-dependencyLocking {
-    // Gradle exposes this Maven parent as a module on Linux but not on Windows.
-    // The actual Guava artifact stays locked and the parent POM stays checksum-verified.
-    ignoredDependencies.add('com.google.guava:guava-parent')
-}
