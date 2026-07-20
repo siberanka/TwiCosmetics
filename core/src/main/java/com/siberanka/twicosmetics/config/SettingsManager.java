@@ -122,8 +122,9 @@ public class SettingsManager {
     }
 
     public void save() {
-        File temporary = new File(file.getParentFile(), file.getName() + ".tmp");
+        File temporary = null;
         try {
+            temporary = Files.createTempFile(file.getParentFile().toPath(), file.getName() + ".", ".tmp").toFile();
             Files.writeString(temporary.toPath(), fileConfiguration.saveToString(), StandardCharsets.UTF_8);
             try {
                 Files.move(temporary.toPath(), file.toPath(), StandardCopyOption.ATOMIC_MOVE,
@@ -133,9 +134,11 @@ public class SettingsManager {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            try {
-                Files.deleteIfExists(temporary.toPath());
-            } catch (IOException ignored) {
+            if (temporary != null) {
+                try {
+                    Files.deleteIfExists(temporary.toPath());
+                } catch (IOException ignored) {
+                }
             }
         }
     }

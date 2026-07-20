@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.16.0-twi.2 - 2026-07-20
+
+- Merged all 16 upstream commits through UltraCosmetics 3.16 while preserving TwiCosmetics package, metadata, compatibility aliases, and fork hardening.
+- Replaced polling-based flat-file profile shutdown with a deterministic, zero-spin drain barrier and added concurrency regression tests.
+- Prevented temporary-file collisions during concurrent atomic YAML saves.
+- Integrated upstream rocket safety, faster snake movement, debug, translation, dependency, and workflow improvements.
+- Guarded rocket dismount cleanup against a null active task.
+
 ## 3.16.0-twi.1 - 2026-07-12
 
 - Forked and rebranded the plugin as TwiCosmetics under `com.siberanka.twicosmetics`.

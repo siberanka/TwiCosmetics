@@ -12,7 +12,7 @@ allprojects {
     idea.module.downloadSources = true
 
     group = 'com.siberanka.twicosmetics'
-    version = '3.16.0-twi.1'
+    version = '3.16.0-twi.2'
 
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'

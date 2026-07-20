@@ -521,6 +521,9 @@ public class TwiCosmetics extends JavaPlugin {
             getSmartLogger().write(LogLevel.WARNING, "Timed out while flushing one or more SQL profiles.");
         }
         playerManager.dispose();
+        // Stop producers before closing the profile writer. Every save queued by
+        // dispose() is still accepted and drained by the close barrier below.
+        getScheduler().cancelAllTasks();
         if (profileSaveService != null) {
             profileSaveService.close();
             profileSaveService = null;
@@ -529,7 +532,6 @@ public class TwiCosmetics extends JavaPlugin {
             mySqlConnectionManager.shutdown();
             mySqlConnectionManager = null;
         }
-        getScheduler().cancelAllTasks();
         FallDamageManager.clear();
         enableFinished = false;
     }

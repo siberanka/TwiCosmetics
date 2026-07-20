@@ -34,7 +34,7 @@ body:
     attributes:
       label: "What version of TwiCosmetics are you using? Do not say 'latest'."
       description: "Hint: check the filename of your TwiCosmetics jar."
-      placeholder: "ex. TwiCosmetics-3.16.0-twi.1"
+      placeholder: "ex. TwiCosmetics-3.16.0-twi.2"
     validations:
       required: true
   - type: input
